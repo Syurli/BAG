@@ -6,6 +6,9 @@
 
 百舸 CrossLoom 面向独立开发者与中小团队，以统一领域数据、轻量引擎桥接和受控 LLM Patch 工作流，降低战斗、任务、对话、AI 等复杂编辑器的开发成本。
 
+- 产品网站：<https://syurli.github.io/CrossLoom/>
+- 项目路线图：[ROADMAP.md](./ROADMAP.md)
+
 ## 核心主张
 
 - **本地优先**：项目数据与正式资产默认不离开开发者设备。
@@ -62,4 +65,4 @@ pnpm check
 
 ## 许可证
 
-计划采用 Apache-2.0。正式公开发行前将完成第三方依赖与品牌使用审查。
+CrossLoom 采用 [Apache License 2.0](./LICENSE)。产品名称、Logo 与官方发行标识不因代码许可证而自动授权。
