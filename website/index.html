@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-language="zh" data-title-zh="百舸 CrossLoom — 百舸争流，共织通途" data-title-en="CrossLoom — Author once, bridge anywhere">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="百舸 CrossLoom：本地优先、跨引擎、人工主导 AI 的游戏内容编辑平台。" />
+  <meta name="description" content="百舸 CrossLoom：本地优先、跨引擎、人工主导 AI 的游戏内容编辑平台。 Local-first, cross-engine game authoring with human-controlled AI." />
   <meta name="theme-color" content="#071015" />
   <title>百舸 CrossLoom — 百舸争流，共织通途</title>
   <link rel="stylesheet" href="./styles.css" />
@@ -11,36 +11,99 @@
 <body>
   <div class="loom-bg" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
   <header class="nav wrap">
-    <a class="brand" href="#top"><span>CL</span><strong>百舸 CrossLoom</strong></a>
+    <a class="brand" href="./index.html"><span>CL</span><strong>百舸 CrossLoom</strong></a>
     <nav>
-      <a href="#principles">原则</a><a href="#architecture">架构</a><a href="#roadmap">路线图</a>
+      <a href="#principles"><span data-lang="zh">原则</span><span data-lang="en">Principles</span></a>
+      <a href="#architecture"><span data-lang="zh">架构</span><span data-lang="en">Architecture</span></a>
+      <a href="./roadmap.html"><span data-lang="zh">路线图</span><span data-lang="en">Roadmap</span></a>
+      <div class="language-switch" role="group" aria-label="Language">
+        <button type="button" data-language-button="zh">中</button>
+        <button type="button" data-language-button="en">EN</button>
+      </div>
       <a class="nav-cta" href="https://github.com/Syurli/CrossLoom">GitHub</a>
     </nav>
   </header>
+
   <main id="top">
     <section class="hero wrap reveal">
       <p class="kicker">LOCAL-FIRST · CROSS-ENGINE · HUMAN-CONTROLLED AI</p>
-      <h1><span>百舸争流，</span><br />共织通途。</h1>
-      <p class="lead">一个面向独立开发者与中小团队的开放游戏内容编辑平台。一次表达设计意图，通过轻量 Bridge 连接不同引擎；LLM 可以参与编辑，但最终决定始终属于创作者。</p>
-      <div class="hero-actions"><a class="button primary" href="https://github.com/Syurli/CrossLoom">查看源代码</a><a class="button ghost" href="https://github.com/Syurli/CrossLoom/blob/main/ROADMAP.md">一年路线图</a></div>
+      <div data-lang="zh">
+        <h1><span>百舸争流，</span><br />共织通途。</h1>
+        <p class="lead">一个面向独立开发者与中小团队的开放游戏内容编辑平台。一次表达设计意图，通过轻量 Bridge 连接不同引擎；LLM 可以参与编辑，但最终决定始终属于创作者。</p>
+      </div>
+      <div data-lang="en">
+        <h1><span>Author once.</span><br />Bridge anywhere.</h1>
+        <p class="lead">An open game authoring platform for independent developers and small-to-medium teams. Express design intent once, connect it to different engines through lightweight bridges, and let LLMs assist without taking control away from creators.</p>
+      </div>
+      <div class="hero-actions">
+        <a class="button primary" href="https://github.com/Syurli/CrossLoom"><span data-lang="zh">查看源代码</span><span data-lang="en">View source</span></a>
+        <a class="button ghost" href="./roadmap.html"><span data-lang="zh">查看完整路线图</span><span data-lang="en">View full roadmap</span></a>
+      </div>
       <div class="status"><span></span> v0.1 Foundation · M0 Architecture Freeze</div>
     </section>
-    <section class="manifest wrap reveal"><p>不同引擎，不必重复创作。</p><p>AI 参与编辑，不越过人工决定。</p><p>数据留在本地，项目不被平台锁定。</p></section>
+
+    <section class="manifest wrap reveal" data-lang="zh">
+      <p>不同引擎，不必重复创作。</p><p>AI 参与编辑，不越过人工决定。</p><p>数据留在本地，项目不被平台锁定。</p>
+    </section>
+    <section class="manifest wrap reveal" data-lang="en">
+      <p>Different engines should not require repeated authoring.</p><p>AI may assist, but cannot bypass human decisions.</p><p>Data stays local and projects remain portable.</p>
+    </section>
+
     <section id="principles" class="section wrap">
-      <div class="section-heading reveal"><span>01</span><div><p>DESIGN PRINCIPLES</p><h2>工具应当服务创作者，而不是接管创作。</h2></div></div>
+      <div class="section-heading reveal"><span>01</span><div><p>DESIGN PRINCIPLES</p><h2 data-lang="zh">工具应当服务创作者，而不是接管创作。</h2><h2 data-lang="en">Tools should serve creators, not take over creation.</h2></div></div>
       <div class="cards">
-        <article class="card reveal"><b>Local-first</b><h3>本地优先</h3><p>源数据、正式资产、Bridge 与 Runtime 默认在开发者设备中工作。网络与远程模型始终是显式选择。</p></article>
-        <article class="card reveal"><b>Engine-neutral</b><h3>设计意图独立</h3><p>CrossLoom IR 描述动画、判定、事件和状态等领域语义，不把创作内容锁在某个引擎的私有资产结构中。</p></article>
-        <article class="card reveal"><b>Human-controlled</b><h3>人工最终确认</h3><p>LLM 只提出经过 Schema 校验的 Patch。每项变更都可以比较、拒绝、撤销并记录批准链。</p></article>
-        <article class="card reveal"><b>Open & portable</b><h3>开放且可迁移</h3><p>开放 Schema、Bridge Protocol 和参考 Runtime；即使不再使用 Studio，项目数据仍可被读取与维护。</p></article>
+        <article class="card reveal"><b>Local-first</b><h3 data-lang="zh">本地优先</h3><h3 data-lang="en">Local by default</h3><p data-lang="zh">源数据、正式资产、Bridge 与 Runtime 默认在开发者设备中工作。网络与远程模型始终是显式选择。</p><p data-lang="en">Source data, production assets, bridges, and runtimes stay on the developer's machine by default. Network access and remote models are always explicit choices.</p></article>
+        <article class="card reveal"><b>Engine-neutral</b><h3 data-lang="zh">设计意图独立</h3><h3 data-lang="en">Intent stays portable</h3><p data-lang="zh">CrossLoom IR 描述动画、判定、事件和状态等领域语义，不把创作内容锁在某个引擎的私有资产结构中。</p><p data-lang="en">CrossLoom IR describes animation, hit detection, events, and state semantics without binding authored content to a proprietary engine asset format.</p></article>
+        <article class="card reveal"><b>Human-controlled</b><h3 data-lang="zh">人工最终确认</h3><h3 data-lang="en">Human approval</h3><p data-lang="zh">LLM 只提出经过 Schema 校验的 Patch。每项变更都可以比较、拒绝、撤销并记录批准链。</p><p data-lang="en">LLMs only propose schema-validated patches. Every change can be compared, rejected, reverted, and recorded in an approval trail.</p></article>
+        <article class="card reveal"><b>Open & portable</b><h3 data-lang="zh">开放且可迁移</h3><h3 data-lang="en">Open and portable</h3><p data-lang="zh">开放 Schema、Bridge Protocol 和参考 Runtime；即使不再使用 Studio，项目数据仍可被读取与维护。</p><p data-lang="en">Schemas, the Bridge Protocol, and reference runtimes remain open, so project data can still be read and maintained without CrossLoom Studio.</p></article>
       </div>
     </section>
-    <section id="architecture" class="section architecture"><div class="wrap"><div class="section-heading reveal"><span>02</span><div><p>ARCHITECTURE</p><h2>统一创作语言，保留引擎差异。</h2></div></div><div class="architecture-grid reveal"><div class="layer studio"><small>AUTHORING</small><strong>CrossLoom Studio</strong><p>Timeline · 3D Viewport · Graph · Curve · Inspector · LLM Patch Review</p></div><div class="flow"><i></i><span>stable, versioned data</span><i></i></div><div class="layer ir"><small>SOURCE OF TRUTH</small><strong>CrossLoom IR</strong><p>Schema · Asset Alias · Units · Coordinate Space · Time Semantics · Extensions</p></div><div class="flow"><i></i><span>Bridge Protocol</span><i></i></div><div class="engines"><div><b>UE</b><span>Unreal</span></div><div><b>GD</b><span>Godot</span></div><div><b>U</b><span>Unity</span></div><div><b>+</b><span>Custom</span></div></div></div><p class="architecture-note reveal">网页负责高频、即时的代理编辑；连接的引擎负责动画、物理、特效与运行结果的权威验证。</p></div></section>
-    <section class="section wrap ai-boundary"><div class="section-heading reveal"><span>03</span><div><p>CONTROLLED AI</p><h2>让 LLM 进入工作流，而不是进入资产所有权。</h2></div></div><div class="patch-flow reveal"><div><span>1</span><b>自然语言意图</b><p>用户选择文档与节点范围</p></div><i>→</i><div><span>2</span><b>结构化 Patch</b><p>模型只输出受限变更</p></div><i>→</i><div><span>3</span><b>可视化 Diff</b><p>校验、比较、逐项审核</p></div><i>→</i><div><span>4</span><b>人工批准</b><p>写入源数据后再由引擎编译</p></div></div></section>
-    <section id="roadmap" class="section wrap"><div class="section-heading reveal"><span>04</span><div><p>ONE-YEAR ROADMAP</p><h2>先完成一个真正可用的战斗编辑闭环。</h2></div></div><div class="milestones reveal"><div class="milestone active"><span>M0</span><b>架构冻结</b><small>Month 1</small></div><div class="milestone"><span>M1</span><b>数据闭环</b><small>Month 2–3</small></div><div class="milestone"><span>M2</span><b>Combat MVP</b><small>Month 4–5</small></div><div class="milestone"><span>M3</span><b>Unreal Alpha</b><small>Month 6–7</small></div><div class="milestone"><span>M4</span><b>Cross-engine</b><small>Month 8–9</small></div><div class="milestone"><span>M5</span><b>LLM Preview</b><small>Month 10</small></div><div class="milestone"><span>M7</span><b>v0.8 Beta</b><small>Month 12</small></div></div></section>
-    <section class="closing wrap reveal"><p>CrossLoom is being built in public.</p><h2>让每一种引擎，都能自由接入创作。</h2><a class="button primary" href="https://github.com/Syurli/CrossLoom">参与百舸 CrossLoom</a></section>
+
+    <section id="architecture" class="section architecture"><div class="wrap">
+      <div class="section-heading reveal"><span>02</span><div><p>ARCHITECTURE</p><h2 data-lang="zh">统一创作语言，保留引擎差异。</h2><h2 data-lang="en">One authoring language, without erasing engine differences.</h2></div></div>
+      <div class="architecture-grid reveal">
+        <div class="layer studio"><small>AUTHORING</small><strong>CrossLoom Studio</strong><p>Timeline · 3D Viewport · Graph · Curve · Inspector · LLM Patch Review</p></div>
+        <div class="flow"><i></i><span>stable, versioned data</span><i></i></div>
+        <div class="layer ir"><small>SOURCE OF TRUTH</small><strong>CrossLoom IR</strong><p>Schema · Asset Alias · Units · Coordinate Space · Time Semantics · Extensions</p></div>
+        <div class="flow"><i></i><span>Bridge Protocol</span><i></i></div>
+        <div class="engines"><div><b>UE</b><span>Unreal</span></div><div><b>GD</b><span>Godot</span></div><div><b>U</b><span>Unity</span></div><div><b>+</b><span>Custom</span></div></div>
+      </div>
+      <p class="architecture-note reveal" data-lang="zh">网页负责高频、即时的代理编辑；连接的引擎负责动画、物理、特效与运行结果的权威验证。</p>
+      <p class="architecture-note reveal" data-lang="en">The web editor handles fast proxy authoring, while connected engines remain authoritative for animation, physics, effects, and runtime behavior.</p>
+    </div></section>
+
+    <section class="section wrap ai-boundary">
+      <div class="section-heading reveal"><span>03</span><div><p>CONTROLLED AI</p><h2 data-lang="zh">让 LLM 进入工作流，而不是进入资产所有权。</h2><h2 data-lang="en">Bring LLMs into the workflow, not into asset ownership.</h2></div></div>
+      <div class="patch-flow reveal">
+        <div><span>1</span><b data-lang="zh">自然语言意图</b><b data-lang="en">Natural-language intent</b><p data-lang="zh">用户选择文档与节点范围</p><p data-lang="en">The user selects the document and scope.</p></div><i>→</i>
+        <div><span>2</span><b data-lang="zh">结构化 Patch</b><b data-lang="en">Structured patch</b><p data-lang="zh">模型只输出受限变更</p><p data-lang="en">The model returns constrained changes only.</p></div><i>→</i>
+        <div><span>3</span><b data-lang="zh">可视化 Diff</b><b data-lang="en">Visual diff</b><p data-lang="zh">校验、比较、逐项审核</p><p data-lang="en">Validate, compare, and review each change.</p></div><i>→</i>
+        <div><span>4</span><b data-lang="zh">人工批准</b><b data-lang="en">Human approval</b><p data-lang="zh">写入源数据后再由引擎编译</p><p data-lang="en">Only approved source data reaches the engine compiler.</p></div>
+      </div>
+    </section>
+
+    <section id="roadmap" class="section wrap">
+      <div class="section-heading reveal"><span>04</span><div><p>ONE-YEAR ROADMAP</p><h2 data-lang="zh">先完成一个真正可用的战斗编辑闭环。</h2><h2 data-lang="en">First, complete a combat-authoring loop people can actually use.</h2></div></div>
+      <div class="milestones reveal">
+        <div class="milestone active"><span>M0</span><b data-lang="zh">架构冻结</b><b data-lang="en">Architecture freeze</b><small>Month 1</small></div>
+        <div class="milestone"><span>M1</span><b data-lang="zh">数据闭环</b><b data-lang="en">Data loop</b><small>Month 2–3</small></div>
+        <div class="milestone"><span>M2</span><b>Combat MVP</b><small>Month 4–5</small></div>
+        <div class="milestone"><span>M3</span><b>Unreal Alpha</b><small>Month 6–7</small></div>
+        <div class="milestone"><span>M4</span><b>Cross-engine</b><small>Month 8–9</small></div>
+        <div class="milestone"><span>M5</span><b>LLM Preview</b><small>Month 10</small></div>
+        <div class="milestone"><span>M7</span><b>v0.8 Beta</b><small>Month 12</small></div>
+      </div>
+      <div class="roadmap-cta reveal"><p data-lang="zh">网站内提供逐月目标、交付内容、验收标准与范围边界。</p><p data-lang="en">The website includes monthly goals, deliverables, acceptance criteria, and scope boundaries.</p><a class="button ghost" href="./roadmap.html"><span data-lang="zh">打开完整路线图</span><span data-lang="en">Open the full roadmap</span></a></div>
+    </section>
+
+    <section class="closing wrap reveal">
+      <p>CrossLoom is being built in public.</p>
+      <h2 data-lang="zh">让每一种引擎，都能自由接入创作。</h2><h2 data-lang="en">Let every engine connect to creation on open terms.</h2>
+      <a class="button primary" href="https://github.com/Syurli/CrossLoom"><span data-lang="zh">参与百舸 CrossLoom</span><span data-lang="en">Join CrossLoom</span></a>
+    </section>
   </main>
-  <footer class="wrap"><span>百舸 CrossLoom</span><span>百舸争流，共织通途。</span><span id="year"></span></footer>
+
+  <footer class="wrap"><span>百舸 CrossLoom</span><span data-lang="zh">百舸争流，共织通途。</span><span data-lang="en">Author once. Bridge anywhere.</span><span id="year"></span></footer>
   <script src="./main.js"></script>
 </body>
 </html>
