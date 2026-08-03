@@ -1,0 +1,28 @@
+node_modules/
+dist/
+build/
+coverage/
+.vite/
+.turbo/
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+!.env.example
+
+# Editor and engine-generated content
+.idea/
+.vscode/
+DerivedDataCache/
+Intermediate/
+Saved/
+Binaries/
+Library/
+Temp/
+obj/
+
+# CrossLoom local project caches
+.crossloom/cache/
+.crossloom/session/
+.crossloom/proxies/
