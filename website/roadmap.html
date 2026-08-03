@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-CN" data-language="zh" data-title-zh="CrossLoom 一年路线图" data-title-en="CrossLoom One-year Roadmap">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="CrossLoom 2026–2027 一年开发路线图，包括逐阶段目标、交付内容、验收标准与范围边界。" />
+  <meta name="theme-color" content="#071015" />
+  <title>CrossLoom 一年路线图</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="loom-bg" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <header class="nav wrap">
+    <a class="brand" href="./index.html"><span>CL</span><strong>百舸 CrossLoom</strong></a>
+    <nav>
+      <a href="./index.html"><span data-lang="zh">产品首页</span><span data-lang="en">Overview</span></a>
+      <a href="#scope"><span data-lang="zh">范围边界</span><span data-lang="en">Scope</span></a>
+      <div class="language-switch" role="group" aria-label="Language">
+        <button type="button" data-language-button="zh">中</button>
+        <button type="button" data-language-button="en">EN</button>
+      </div>
+      <a class="nav-cta" href="https://github.com/Syurli/CrossLoom">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="roadmap-hero wrap reveal">
+      <p class="kicker">AUGUST 2026 — JULY 2027</p>
+      <div data-lang="zh">
+        <h1>一年内，从开放协议走向可用产品。</h1>
+        <p class="lead">年度目标不是堆叠所有编辑器类型，而是交付可公开使用的 v0.8 Beta：战斗动作编辑闭环、稳定的 CrossLoom IR、Unreal 正式支持、Godot 跨引擎验证，以及受控的 LLM Patch 工作流。</p>
+      </div>
+      <div data-lang="en">
+        <h1>From an open protocol to a usable product in one year.</h1>
+        <p class="lead">The goal is not to accumulate every possible editor. It is to ship a usable v0.8 Beta with a complete combat-authoring loop, stable CrossLoom IR, production-grade Unreal support, cross-engine validation in Godot, and a controlled LLM Patch workflow.</p>
+      </div>
+      <div class="roadmap-meta"><span>Target: v0.8 Public Beta</span><span>Primary: Unreal Engine</span><span>Reference: Godot</span><span>Preview: Unity</span></div>
+    </section>
+
+    <section class="roadmap-list wrap">
+      <article class="roadmap-phase active reveal">
+        <div class="phase-index"><span>M0</span><b data-lang="zh">架构冻结</b><b data-lang="en">Architecture freeze</b><small>Month 1</small></div>
+        <div class="phase-content">
+          <h2 data-lang="zh">证明核心技术路径</h2><h2 data-lang="en">Prove the core technical path</h2>
+          <p data-lang="zh">确认 Web 3D 强编辑、引擎桥接和统一数据能够形成最小闭环。</p><p data-lang="en">Confirm that web-based 3D authoring, engine bridges, and shared data can form a minimal end-to-end loop.</p>
+          <div class="phase-columns"><div><h3>Deliverables</h3><ul data-lang="zh"><li>Monorepo、工程规范与 Codex 约束</li><li>蒙皮动画代理与基础判定体</li><li>Combat IR 与 Bridge Protocol 草案</li><li>Unreal、Godot 最小读取验证</li></ul><ul data-lang="en"><li>Monorepo, engineering rules, and Codex constraints</li><li>Skinned animation proxy and basic damage volumes</li><li>Combat IR and Bridge Protocol drafts</li><li>Minimal Unreal and Godot readers</li></ul></div><div><h3>Exit criteria</h3><ul data-lang="zh"><li>网页可播放动画并放置判定框</li><li>JSON 可被两个引擎读取</li><li>时间与空间语义有明确规范</li></ul><ul data-lang="en"><li>The web editor plays animation and places a damage volume</li><li>The same JSON is read by two engines</li><li>Time and spatial semantics are documented</li></ul></div></div>
+        </div>
+      </article>
+
+      <article class="roadmap-phase reveal">
+        <div class="phase-index"><span>M1</span><b data-lang="zh">数据闭环</b><b data-lang="en">Data loop</b><small>Month 2–3</small></div>
+        <div class="phase-content">
+          <h2 data-lang="zh">建立可长期演进的数据与编辑器基础</h2><h2 data-lang="en">Build durable data and editor foundations</h2>
+          <p data-lang="zh">完成版本化 IR、Schema、项目保存和通用编辑器框架。</p><p data-lang="en">Complete versioned IR, schemas, project persistence, and the shared editor framework.</p>
+          <div class="phase-columns"><div><h3>Deliverables</h3><ul data-lang="zh"><li>JSON Schema 与 TypeScript/C++ 类型生成</li><li>资源逻辑 URI、版本迁移与稳定序列化</li><li>时间轴、属性面板、选择、复制粘贴</li><li>Undo/Redo、自动保存与崩溃恢复</li></ul><ul data-lang="en"><li>JSON Schema and generated TypeScript/C++ types</li><li>Logical asset URIs, migrations, and stable serialization</li><li>Timeline, inspector, selection, copy and paste</li><li>Undo/redo, autosave, and crash recovery</li></ul></div><div><h3>Exit criteria</h3><ul data-lang="zh"><li>无需引擎即可创建并校验动作文件</li><li>重复保存不产生无意义 Diff</li><li>错误能定位到字段和轨道</li></ul><ul data-lang="en"><li>Actions can be authored and validated without an engine</li><li>Repeated saves produce no meaningless diffs</li><li>Errors point to specific fields and tracks</li></ul></div></div>
+        </div>
+      </article>
+
+      <article class="roadmap-phase reveal">
+        <div class="phase-index"><span>M2</span><b>Combat MVP</b><small>Month 4–5</small></div>
+        <div class="phase-content">
+          <h2 data-lang="zh">完成网页端战斗动作强编辑</h2><h2 data-lang="en">Complete strong combat authoring in the web editor</h2>
+          <p data-lang="zh">让真实战斗动作可以在网页中被制作、播放和检查。</p><p data-lang="en">Make real combat actions authorable, playable, and inspectable in the web editor.</p>
+          <div class="phase-columns"><div><h3>Deliverables</h3><ul data-lang="zh"><li>骨架树、Socket、虚拟挂点与 3D Gizmo</li><li>Box、Sphere、Capsule 及 Sweep 轨迹</li><li>关键帧、曲线、动画 Marker 与吸附</li><li>VFX、Audio、输入、取消、无敌与 Hit Stop 轨</li></ul><ul data-lang="en"><li>Skeleton tree, sockets, virtual sockets, and 3D gizmos</li><li>Box, sphere, capsule, and sweep trajectories</li><li>Keyframes, curves, animation markers, and snapping</li><li>VFX, audio, input, cancel, invulnerability, and hit-stop tracks</li></ul></div><div><h3>Exit criteria</h3><ul data-lang="zh"><li>完成横扫、多段连击与突进攻击示例</li><li>判定体与动画、挂点和曲线同步</li><li>网页流程较引擎定制工具有明确效率优势</li></ul><ul data-lang="en"><li>Ship sweep, multi-hit combo, and dash attack examples</li><li>Damage volumes stay synchronized with animation, sockets, and curves</li><li>The workflow demonstrates a clear productivity gain</li></ul></div></div>
+        </div>
+      </article>
+
+      <article class="roadmap-phase reveal">
+        <div class="phase-index"><span>M3</span><b>Unreal Alpha</b><small>Month 6–7</small></div>
+        <div class="phase-content">
+          <h2 data-lang="zh">建立 Unreal 生产闭环</h2><h2 data-lang="en">Establish the Unreal production loop</h2>
+          <p data-lang="zh">Unreal 负责资源查询、代理输出、权威预览、数据编译和运行时执行。</p><p data-lang="en">Unreal becomes responsible for asset queries, proxy export, authoritative preview, compilation, and runtime execution.</p>
+          <div class="phase-columns"><div><h3>Deliverables</h3><ul data-lang="zh"><li>Unreal Bridge、Asset Registry 与 Gameplay Tag 查询</li><li>HTTP/WebSocket、缓存与增量 Patch</li><li>Runtime Executor、Sweep、命中去重</li><li>骨骼姿态流、PIE 调试与 Cook 测试</li></ul><ul data-lang="en"><li>Unreal Bridge, Asset Registry, and Gameplay Tag queries</li><li>HTTP/WebSocket transport, caching, and incremental patches</li><li>Runtime executors, sweeps, and hit deduplication</li><li>Pose streaming, PIE debugging, and cook tests</li></ul></div><div><h3>Exit criteria</h3><ul data-lang="zh"><li>编辑、预览、保存、编译与 PIE 运行全流程贯通</li><li>真实动画、碰撞、特效和音效正确触发</li><li>可邀请首批外部开发者试用</li></ul><ul data-lang="en"><li>Authoring, preview, save, compile, and PIE form one loop</li><li>Real animation, collision, VFX, and audio trigger correctly</li><li>The first external developers can test the tool</li></ul></div></div>
+        </div>
+      </article>
+
+      <article class="roadmap-phase reveal">
+        <div class="phase-index"><span>M4</span><b>Cross-engine Alpha</b><small>Month 8–9</small></div>
+        <div class="phase-content">
+          <h2 data-lang="zh">证明同一份设计数据可以跨引擎执行</h2><h2 data-lang="en">Prove that one design file can run across engines</h2>
+          <p data-lang="zh">以 Godot 作为正式参考实现，以 Unity 作为技术预览。</p><p data-lang="en">Use Godot as the formal reference implementation and Unity as a technical preview.</p>
+          <div class="phase-columns"><div><h3>Deliverables</h3><ul data-lang="zh"><li>Godot Bridge 与 Runtime Executor</li><li>资源 Alias、坐标与单位转换</li><li>Capability Matrix、引擎扩展与降级规则</li><li>Unity 基础动画和判定技术预览</li></ul><ul data-lang="en"><li>Godot Bridge and runtime executors</li><li>Asset aliases, coordinates, and unit conversion</li><li>Capability matrix, engine extensions, and fallback rules</li><li>Unity animation and damage-volume technical preview</li></ul></div><div><h3>Exit criteria</h3><ul data-lang="zh"><li>同一动作文件在 Unreal 与 Godot 中运行</li><li>事件时序、尺寸与执行顺序可自动比较</li><li>第三方能依据文档理解 Bridge 实现方式</li></ul><ul data-lang="en"><li>The same action file runs in Unreal and Godot</li><li>Timing, dimensions, and execution order can be compared automatically</li><li>Third parties can understand how to implement a bridge</li></ul></div></div>
+        </div>
+      </article>
+
+      <article class="roadmap-phase reveal">
+        <div class="phase-index"><span>M5</span><b>Public Preview</b><small>Month 10</small></div>
+        <div class="phase-content">
+          <h2 data-lang="zh">接入受控 LLM 编辑</h2><h2 data-lang="en">Introduce controlled LLM authoring</h2>
+          <p data-lang="zh">AI 只能在用户授权的数据范围内提出结构化 Patch。</p><p data-lang="en">AI may only propose structured patches within the data scope authorized by the user.</p>
+          <div class="phase-columns"><div><h3>Deliverables</h3><ul data-lang="zh"><li>模型 Provider 抽象与 Schema 上下文</li><li>Patch 校验、可视化 Diff 与逐项批准</li><li>AI 修改来源、回滚与人工审核记录</li><li>远程模型权限、脱敏与注入防护</li></ul><ul data-lang="en"><li>Model-provider abstraction and schema context</li><li>Patch validation, visual diffs, and per-change approval</li><li>AI provenance, rollback, and human approval records</li><li>Remote-model permissions, redaction, and injection defenses</li></ul></div><div><h3>Exit criteria</h3><ul data-lang="zh"><li>未经人工确认不能写入源文件</li><li>LLM 默认看不到最终资产与完整项目目录</li><li>公开演示能明确说明 AI 边界</li></ul><ul data-lang="en"><li>No source file is changed without human approval</li><li>LLMs do not see final assets or the whole project tree by default</li><li>The public demo clearly communicates AI boundaries</li></ul></div></div>
+        </div>
+      </article>
+
+      <article class="roadmap-phase reveal">
+        <div class="phase-index"><span>M6</span><b>Release Candidate</b><small>Month 11</small></div>
+        <div class="phase-content">
+          <h2 data-lang="zh">从工程转化为他人可使用的产品</h2><h2 data-lang="en">Turn the engineering project into a usable product</h2>
+          <p data-lang="zh">集中解决安装、文档、示例、许可和首次使用体验。</p><p data-lang="en">Focus on installation, documentation, examples, licensing, and first-run experience.</p>
+          <div class="phase-columns"><div><h3>Deliverables</h3><ul data-lang="zh"><li>安装包、版本检测与稳定发布渠道</li><li>快速开始、Bridge 文档和示例项目</li><li>贡献指南、Issue 模板和安全报告流程</li><li>10–20 名封闭测试者</li></ul><ul data-lang="en"><li>Installer, version checks, and a stable release channel</li><li>Quick start, bridge documentation, and example projects</li><li>Contribution guide, issue templates, and security reporting</li><li>10–20 closed testers</li></ul></div><div><h3>Exit criteria</h3><ul data-lang="zh"><li>陌生用户无需作者讲解即可完成基本流程</li><li>功能冻结，只修阻塞问题</li><li>发布所需许可证与依赖审查完成</li></ul><ul data-lang="en"><li>A new user completes the basic flow without author assistance</li><li>Feature freeze; only blocking issues remain</li><li>Licensing and dependency review is complete</li></ul></div></div>
+        </div>
+      </article>
+
+      <article class="roadmap-phase reveal">
+        <div class="phase-index"><span>M7</span><b>v0.8 Public Beta</b><small>Month 12</small></div>
+        <div class="phase-content">
+          <h2 data-lang="zh">公开发布并建立真实采用案例</h2><h2 data-lang="en">Release publicly and establish real adoption cases</h2>
+          <p data-lang="zh">最后一个月只处理稳定性、发布和反馈，不继续扩张核心范围。</p><p data-lang="en">The final month is reserved for stability, release, and feedback rather than new core scope.</p>
+          <div class="phase-columns"><div><h3>Deliverables</h3><ul data-lang="zh"><li>GitHub 开源发布与官方构建</li><li>产品网站、演示视频与发布说明</li><li>Fab Unreal Bridge 与 Godot 插件发布准备</li><li>赞助版与 v0.9 后续计划</li></ul><ul data-lang="en"><li>Open-source GitHub release and official builds</li><li>Product website, demo video, and release notes</li><li>Fab Unreal Bridge and Godot plugin release preparation</li><li>Supporter edition and v0.9 roadmap</li></ul></div><div><h3>Exit criteria</h3><ul data-lang="zh"><li>真实开发者愿意用它完成一个动作</li><li>同一数据在两个引擎中执行</li><li>LLM 在隔离资产的前提下有效辅助编辑</li></ul><ul data-lang="en"><li>Real developers use it to author an action</li><li>The same data executes in two engines</li><li>LLM assistance is useful while final assets remain isolated</li></ul></div></div>
+        </div>
+      </article>
+    </section>
+
+    <section id="scope" class="section wrap">
+      <div class="section-heading reveal"><span>08</span><div><p>SCOPE CONTROL</p><h2 data-lang="zh">完成核心闭环，比铺开所有模块更重要。</h2><h2 data-lang="en">Completing the core loop matters more than expanding every module.</h2></div></div>
+      <div class="scope-grid">
+        <article class="scope-card keep reveal"><h3 data-lang="zh">年度不可削减</h3><h3 data-lang="en">Must remain in scope</h3><ul data-lang="zh"><li>Schema 版本与迁移</li><li>Undo/Redo 和数据校验</li><li>Unreal 完整闭环</li><li>第二引擎跨引擎验证</li><li>人工审核式 LLM Patch</li><li>文档、示例和安装体验</li></ul><ul data-lang="en"><li>Schema versions and migrations</li><li>Undo/redo and validation</li><li>Complete Unreal loop</li><li>Cross-engine validation in a second engine</li><li>Human-reviewed LLM patches</li><li>Documentation, examples, and installation</li></ul></article>
+        <article class="scope-card cut reveal"><h3 data-lang="zh">延期到第二年度</h3><h3 data-lang="en">Deferred beyond year one</h3><ul data-lang="zh"><li>完整任务、对话与行为树编辑器</li><li>完整动画状态机和通用 Sequencer 替代</li><li>材质、Niagara 或 VFX Graph 替代</li><li>云端协同和多人实时编辑</li><li>插件市场与企业权限系统</li><li>三个引擎同等深度支持</li></ul><ul data-lang="en"><li>Full quest, dialogue, and behavior-tree editors</li><li>Full animation state machines or a Sequencer replacement</li><li>Material, Niagara, or VFX Graph replacements</li><li>Cloud collaboration and real-time co-editing</li><li>Plugin marketplace and enterprise permissions</li><li>Equal-depth support for all three engines</li></ul></article>
+      </div>
+    </section>
+
+    <section class="closing wrap reveal"><p>BUILD IN PUBLIC · VALIDATE IN PRODUCTION</p><h2 data-lang="zh">一年后的目标，是别人能够真正使用它。</h2><h2 data-lang="en">The one-year goal is a tool other people can truly use.</h2><a class="button primary" href="https://github.com/Syurli/CrossLoom"><span data-lang="zh">查看开发仓库</span><span data-lang="en">View the repository</span></a></section>
+  </main>
+
+  <footer class="wrap"><span>百舸 CrossLoom</span><a href="./index.html"><span data-lang="zh">返回产品首页</span><span data-lang="en">Back to overview</span></a><span id="year"></span></footer>
+  <script src="./main.js"></script>
+</body>
+</html>
