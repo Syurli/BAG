@@ -1,0 +1,27 @@
+name: Feature request
+description: Propose a user outcome, not only an implementation
+title: "[Feature] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What development problem should this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Describe the desired authoring workflow
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Primary layer
+      options: [Studio, Schema or IR, Bridge Protocol, Unreal, Godot, Unity, LLM workflow, Documentation]
+    validations:
+      required: true
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Cross-engine and compatibility considerations

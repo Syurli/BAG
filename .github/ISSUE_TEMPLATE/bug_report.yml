@@ -1,0 +1,29 @@
+name: Bug report
+description: Report a reproducible CrossLoom defect
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: Please remove private project assets and credentials from all reports.
+  - type: textarea
+    id: result
+    attributes:
+      label: Expected user result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result and reproduction steps
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: CrossLoom, OS, engine and bridge versions
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Sanitized logs or sample data
