@@ -1,0 +1,15 @@
+# Generated during pnpm install; the repository does not currently commit a lockfile.
+pnpm-lock.yaml
+
+# Static product site is intentionally hand-styled and compact.
+website/
+
+# Existing prototype UI files use hand-authored formatting.
+apps/studio/src/App.tsx
+apps/studio/src/styles.css
+
+# GitHub form YAML is maintained for readability rather than Prettier layout.
+.github/ISSUE_TEMPLATE/
+
+# Roadmap tables intentionally preserve bilingual column formatting.
+ROADMAP.md
