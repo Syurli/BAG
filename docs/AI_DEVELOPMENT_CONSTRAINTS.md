@@ -1,6 +1,6 @@
 # AI 开发与编辑约束
 
-本规范同时约束“使用 Codex 开发 BAIGE”与“最终产品中的 LLM 编辑功能”。产品命名与品牌展示同时受 `PRODUCT_NAMING.md` 约束。
+本规范同时约束“使用 Codex 开发 BAG（百舸）”与“最终产品中的 LLM 编辑功能”。产品命名与品牌展示同时受 `PRODUCT_NAMING.md` 约束。
 
 ## A. Codex 开发约束
 
@@ -12,13 +12,14 @@
 
 以下内容未经维护者批准不得改变语义：
 
-- BAIGE IR 核心类型；
+- BAG IR 核心类型；
 - 坐标与单位规范；
 - 时间锚点与执行顺序；
 - Bridge 握手与能力协商；
 - LLM 权限与人工批准链；
 - 数据迁移规则；
-- 正式产品名称与 `A BAIGE Project` 品牌署名规则。
+- `BAG / Build Across Games` 母品牌规则；
+- 正式产品名称与 `A BAIGE Project` 家族署名规则。
 
 ### A3. 编码要求
 
@@ -27,7 +28,8 @@
 - 跨进程消息必须先校验再使用。
 - 引擎适配代码不得反向依赖 Studio UI。
 - 不得提交仅为了让测试通过而绕过真实行为的 Mock。
-- 新共享包使用 `@baige/*`；不得重新引入 `@crossloom/*`，除非明确为迁移兼容层。
+- 新共享包使用 `@bag/*`；不得重新引入 `@baige/*` 或 `@crossloom/*`，除非明确为迁移兼容层。
+- `BAIGE` 不得作为平台、技术组件、公共 API 或 namespace 名称；仅允许用于固定署名 `A BAIGE Project` 及历史迁移说明。
 
 ### A4. 测试要求
 
