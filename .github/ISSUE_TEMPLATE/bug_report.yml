@@ -1,5 +1,5 @@
 name: Bug report
-description: Report a reproducible CrossLoom defect
+description: Report a reproducible BAIGE defect
 title: "[Bug] "
 body:
   - type: markdown
@@ -20,7 +20,7 @@ body:
   - type: input
     id: versions
     attributes:
-      label: CrossLoom, OS, engine and bridge versions
+      label: BAIGE, OS, engine and bridge versions
     validations:
       required: true
   - type: textarea
