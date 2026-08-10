@@ -1,5 +1,5 @@
 {
-  "name": "@crossloom/bridge-protocol",
+  "name": "@baige/bridge-protocol",
   "version": "0.1.0",
   "private": true,
   "type": "module",
