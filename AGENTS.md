@@ -1,10 +1,10 @@
 # AGENTS.md
 
-本文件是 Codex 及其他代码代理在 BAIGE（百舸）仓库中的最高优先级工程约束。任何子目录可增加更严格的 `AGENTS.md`，但不得削弱本文件要求。
+本文件是 Codex 及其他代码代理在 BAG（百舸）仓库中的最高优先级工程约束。任何子目录可增加更严格的 `AGENTS.md`，但不得削弱本文件要求。
 
 ## 1. 项目目标
 
-BAIGE 是本地优先、跨引擎、人工主导 AI 的游戏内容创作基础平台。代理必须优先保护：数据可迁移性、人工审核权、引擎中立性、可回滚性与长期兼容性。
+BAG（Build Across Games）是百舸的英文母品牌与技术平台，面向本地优先、跨引擎、人工主导 AI 的游戏内容创作工具。代理必须优先保护：数据可迁移性、人工审核权、引擎中立性、可回滚性与长期兼容性。
 
 面向用户的官方产品必须拥有独立名称，并统一使用 `A BAIGE Project` 署名。产品命名与品牌用法遵循 `docs/PRODUCT_NAMING.md`。
 
@@ -19,7 +19,8 @@ BAIGE 是本地优先、跨引擎、人工主导 AI 的游戏内容创作基础�
 7. 不得手工修改标记为 generated 的文件；应修改源 Schema 或生成器。
 8. 不得把网页预览结果声明为引擎权威结果。
 9. 不得在新代码、网页标题、包名或公共 API 中重新引入 `CrossLoom` / `@crossloom/*`，除非明确用于迁移兼容。
-10. 不得将面向用户的新产品命名为 `BAIGE + 功能名`；官方产品应遵循独立命名规则并使用 `A BAIGE Project`。
+10. 不得把 `BAIGE` 单独作为平台、技术组件、公共 API 或 namespace 名称；`BAIGE` 只允许用于固定署名 `A BAIGE Project` 与历史迁移说明。
+11. 不得将面向用户的新产品命名为 `BAG + 功能名`；官方产品应遵循独立命名规则并使用 `A BAIGE Project`。
 
 ## 3. 每个任务的必备输入
 
@@ -45,8 +46,9 @@ BAIGE 是本地优先、跨引擎、人工主导 AI 的游戏内容创作基础�
 - 所有持久化变更必须可撤销、可重放、可生成稳定 Diff。
 - 坐标、单位、时间、插值、生命周期必须显式声明。
 - 新功能必须说明不支持时的降级行为。
-- 共享 JavaScript/TypeScript 包统一使用 `@baige/*` 命名空间。
-- BAIGE 通用技术层可以使用 `BAIGE Studio / BAIGE IR / BAIGE Bridge Protocol` 等名称；领域产品使用独立产品名。
+- 共享 JavaScript/TypeScript 包统一使用 `@bag/*` 命名空间。
+- BAG 通用技术层可以使用 `BAG Studio / BAG IR / BAG Bridge Protocol / BAG Runtime` 等名称；领域产品使用独立产品名。
+- `BAG` 的正式英文展开是 `Build Across Games`。
 
 ## 5. 验证要求
 
