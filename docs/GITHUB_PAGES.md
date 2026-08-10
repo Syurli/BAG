@@ -1,16 +1,16 @@
-# BAIGE GitHub Pages 产品网站
+# BAG GitHub Pages 产品网站
 
-BAIGE 的产品说明站点位于 `website/`，由 `.github/workflows/pages.yml` 在 `main` 分支发生相关变更时自动发布。
+BAG（百舸）的产品说明站点位于 `website/`，由 `.github/workflows/pages.yml` 在 `main` 分支发生相关变更时自动发布。
 
-## 当前地址与历史 slug
+## 当前地址
 
-当前默认项目站点地址为：
+仓库已经重命名为 `BAG`，默认项目站点地址应使用：
 
-`https://syurli.github.io/CrossLoom/`
+`https://syurli.github.io/BAG/`
 
-其中 `CrossLoom` 是仓库历史 slug，不再是平台品牌名。页面标题、文案、技术术语和新链接文案均应使用 **BAIGE / 百舸**。
+页面标题、文案、技术术语和新链接文案均应使用 **BAG / 百舸**。英文品牌展开为 **Build Across Games**。
 
-如果未来重命名 GitHub 仓库或迁移到自定义域名，应保留旧地址的跳转或迁移说明，避免历史链接失效。
+`BAIGE` 不作为平台名称展示，只保留在旗下正式产品的固定署名 `A BAIGE Project` 中。
 
 ## 首次启用
 
@@ -27,10 +27,13 @@ BAIGE 的产品说明站点位于 `website/`，由 `.github/workflows/pages.yml`
 
 网站必须遵循 `PRODUCT_NAMING.md`：
 
-- 母品牌写作 `BAIGE` / `百舸`；
+- 母品牌写作 `BAG` / `百舸`；
+- 品牌解释使用 `Build Across Games`；
 - 官方独立产品使用自己的名称；
 - 官方产品家族署名固定为 `A BAIGE Project`；
-- 不在新页面继续把 `CrossLoom` 作为产品或平台名称展示。
+- BAG 平台自身不使用 `A BAIGE Project` 署名；
+- 不在新页面把 `BAIGE` 单独作为平台英文名；
+- 不继续把 `CrossLoom` 作为产品或平台名称展示。
 
 ## 自定义域名
 

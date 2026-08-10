@@ -1,6 +1,6 @@
-# Contributing to BAIGE / 参与百舸
+# Contributing to BAG / 参与百舸
 
-感谢参与百舸 BAIGE。
+感谢参与百舸 / BAG（Build Across Games）。
 
 ## 开始前
 
@@ -24,9 +24,10 @@ PR 必须包含：变更摘要、设计理由、测试、截图或录屏（涉�
 涉及命名与品牌时还需说明：
 
 - 是否修改用户可见产品名；
-- 是否修改 `@baige/*` 包、公共类型、CLI 或持久化标识；
-- 是否需要迁移旧 `CrossLoom` / `@crossloom/*` / 其他历史名称；
-- 是否正确使用 `A BAIGE Project`。
+- 是否修改 `@bag/*` 包、公共类型、CLI 或持久化标识；
+- 是否需要迁移旧 `@baige/*`、`CrossLoom` / `@crossloom/*` 或其他历史名称；
+- 是否正确区分 `BAG / Build Across Games` 母品牌与 `A BAIGE Project` 产品署名；
+- 是否避免把 `BAIGE` 单独作为平台或技术名称。
 
 ## 设计原则
 

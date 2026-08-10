@@ -10,11 +10,11 @@ export function App() {
     <main className="studio-shell">
       <header className="topbar">
         <div className="brand-mark" aria-hidden="true">
-          BG
+          BAG
         </div>
         <div>
-          <strong>BAIGE Studio</strong>
-          <span>A BAIGE Project · Foundation</span>
+          <strong>BAG Studio</strong>
+          <span>Build Across Games · Foundation</span>
         </div>
         <div className="connection">
           <span className="status-dot" /> Bridge offline
